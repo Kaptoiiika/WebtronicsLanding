@@ -8,6 +8,8 @@ import { Arrow } from "@/shared/ui/Arrows/Arrow"
 import { Input } from "@/shared/ui/Input/Input"
 import { Card } from "@/shared/ui/Card/Card"
 import { VStack } from "@/shared/ui/Stack"
+import { Avatar } from "@/shared/ui/Avatar/Avatar"
+import { ProfileCard } from "@/entities/Profile/ui/ProfileCard/ProfileCard"
 
 export default function Home() {
   return (
@@ -74,6 +76,17 @@ export default function Home() {
               title="Introduction to Front-End"
               content="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. "
               reverse
+            />
+          </div>
+          <div>
+            <ProfileCard
+              profile={{
+                avatar:
+                  "https://sun9-15.userapi.com/impg/hh-8JPnmbdZz9j-OHt_WlEtz__lYcqMxnT3ThQ/OD-iGwjEDB0.jpg?size=2048x2048&quality=95&sign=f1fe2958e4f67c5252116b5071de8333&type=album",
+                name: "Robert Fox",
+                status: "Front-end engineers work closely with designers",
+                bio: "Minim sunt exercitation fugiat occaecat fugiat tempor sunt ipsum officia laboris eiusmod.",
+              }}
             />
           </div>
         </VStack>
