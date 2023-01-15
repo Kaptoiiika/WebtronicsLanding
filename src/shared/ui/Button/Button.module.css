@@ -1,0 +1,21 @@
+.button {
+  font-size: 20px;
+  line-height: 24px;
+  padding: 24px;
+  color: var(--color-primary-100);
+  background: var(--color-linear-2);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button:hover {
+  color: var(--color-primary-80);
+}
+
+.button:active {
+  color: var(--color-clean);
+}
+
+.button:disabled {
+  opacity: 0.4;
+}

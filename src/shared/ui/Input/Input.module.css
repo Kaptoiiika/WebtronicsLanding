@@ -1,0 +1,20 @@
+.input {
+  font-size: 16px;
+  background: var(--color-clean-5);
+  color: var(--color-text-40);
+  outline: none;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.input:focus {
+  color: var(--color-clean);
+}
+
+.input.error {
+  background: rgba(255, 165, 165, 0.2);
+}
+
+.input:disabled {
+  color: var(--color-border);
+}

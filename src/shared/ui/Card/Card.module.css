@@ -1,0 +1,26 @@
+.cardWrapper {
+  position: relative;
+  height: 228px;
+  max-width: 491px;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  margin: 0 16px;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.cardStroke {
+  position: absolute;
+}
+
+.content {
+  color: var(--color-text-40);
+}
+
+.reverse {
+  right: 0;
+  transform: rotate(180deg);
+}

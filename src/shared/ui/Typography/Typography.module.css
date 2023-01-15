@@ -1,0 +1,36 @@
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.variantH1 {
+  font-size: 150px;
+}
+.variantH2 {
+  font-size: 72px;
+}
+.variantH3 {
+  font-size: 32px;
+}
+.variantH4 {
+  font-size: 24px;
+}
+.variantP1 {
+  font-size: 16px;
+}
+.variantP2 {
+  font-size: 14px;
+}
+
+.oneLine {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
