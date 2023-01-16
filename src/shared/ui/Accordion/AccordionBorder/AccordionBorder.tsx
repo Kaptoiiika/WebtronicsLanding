@@ -15,7 +15,7 @@ export const AccordionBorder = (props: AccordionBorderProps) => {
       viewBox={open ? "0 0 703 166" : "0 0 703 62"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={styles.AccordionBorder}
+      pointerEvents="none"
     >
       {open ? (
         <>
