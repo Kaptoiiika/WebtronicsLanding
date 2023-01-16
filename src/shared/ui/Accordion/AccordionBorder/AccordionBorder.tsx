@@ -1,7 +1,3 @@
-import { classNames } from "@/shared/lib/classNames/classNames"
-import { PropsWithChildren } from "react"
-import styles from "./AccordionBorder.module.scss"
-
 type AccordionBorderProps = {
   open?: boolean
 }

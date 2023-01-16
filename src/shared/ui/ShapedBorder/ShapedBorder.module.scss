@@ -13,8 +13,9 @@
     bottom: 0;
     border-radius: inherit;
     border: solid transparent;
-    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
+    -webkit-mask-composite: xor;
     pointer-events: none;
   }
 }

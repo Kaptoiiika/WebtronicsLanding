@@ -1,5 +1,5 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
-import styles from "./InfoCard.module.css"
+import styles from "./InfoCard.module.scss"
 import CardStroke from "./InfoCardStroke.svg"
 import { VStack } from "@/shared/ui/Stack"
 import {

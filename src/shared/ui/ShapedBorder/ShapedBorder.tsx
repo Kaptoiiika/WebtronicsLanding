@@ -1,6 +1,5 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
-import { type } from "os"
-import React, { Component, Fragment, PropsWithChildren } from "react"
+import React, { PropsWithChildren } from "react"
 import styles from "./ShapedBorder.module.scss"
 
 export type bordersWidth = "1" | "4"

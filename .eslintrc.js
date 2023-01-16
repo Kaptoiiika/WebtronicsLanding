@@ -46,5 +46,12 @@ module.exports = {
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
   },
-  overrides: [],
+  overrides: [
+    {
+      files: ["**/src/**/*.stories.tsx"],
+      rules: {
+        "react/jsx-props-no-spreading": ["off"],
+      },
+    },
+  ],
 }

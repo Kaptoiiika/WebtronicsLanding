@@ -1,7 +1,7 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
 import { ButtonHTMLAttributes } from "react"
 import { ShapedBorder } from "../ShapedBorder/ShapedBorder"
-import styles from "./Arrow.module.css"
+import styles from "./Arrow.module.scss"
 
 type ArrowOrientation = "left" | "top" | "right" | "bottom"
 

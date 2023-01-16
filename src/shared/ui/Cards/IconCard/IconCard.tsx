@@ -1,4 +1,4 @@
-import styles from "./IconCard.module.css"
+import styles from "./IconCard.module.scss"
 import angular from "@/shared/assets/icons/angular.png"
 import react from "@/shared/assets/icons/react.png"
 import vue from "@/shared/assets/icons/vue.png"

@@ -1,5 +1,5 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
-import styles from "./Avatar.module.css"
+import styles from "./Avatar.module.scss"
 import { ShapedBorder } from "@/shared/ui/ShapedBorder/ShapedBorder"
 
 type AvatarProps = {

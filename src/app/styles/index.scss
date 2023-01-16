@@ -4,3 +4,8 @@
 :root {
   --app-max-width: 1366px;
 }
+
+body {
+  background-color: var(--color-bg);
+  color: white;
+}

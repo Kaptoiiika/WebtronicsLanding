@@ -2,7 +2,7 @@ import { classNames } from "@/shared/lib/classNames/classNames"
 import { InputHTMLAttributes } from "react"
 import { ShapedBorder } from "@/shared/ui/ShapedBorder/ShapedBorder"
 import { VStack } from "../Stack"
-import styles from "./Input.module.css"
+import styles from "./Input.module.scss"
 
 type InputProps = {
   className?: string

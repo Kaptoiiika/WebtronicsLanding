@@ -1,6 +1,6 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
 import { ButtonHTMLAttributes } from "react"
-import styles from "./Button.module.css"
+import styles from "./Button.module.scss"
 
 type ButtonProps = {
   className?: string
@@ -11,6 +11,7 @@ export const Button = (props: ButtonProps) => {
   const { className, children, disabled, ...buttonProps } = props
   return (
     <button
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...buttonProps}
       className={classNames([className, styles.button])}
       disabled={disabled}
