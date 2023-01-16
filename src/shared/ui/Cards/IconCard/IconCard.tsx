@@ -1,4 +1,3 @@
-import { classNames } from "@/shared/lib/classNames/classNames"
 import styles from "./IconCard.module.css"
 import angular from "@/shared/assets/icons/angular.png"
 import react from "@/shared/assets/icons/react.png"
@@ -10,7 +9,7 @@ import {
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
 import { StaticImageData } from "next/image"
-import { IconCardBorder } from "../IconCardBorder/IconCardBorder"
+import IconCardBorder from "./IconCardBorder.svg"
 
 export type IconType = "Angular" | "React" | "Vue.js" | "JavaScript"
 

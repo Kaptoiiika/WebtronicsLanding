@@ -22,12 +22,12 @@ export const AccordionBorder = (props: AccordionBorderProps) => {
           <path
             d="M0 158V31.6623L31.6623 0H695C699.418 0 703 3.58172 703 8V129.418L666.418 166H7.99998C3.58171 166 0 162.418 0 158Z"
             fill="white"
-            fill-opacity="0.05"
+            fillOpacity="0.05"
           />
           <path
             d="M0.5 158V31.8694L31.8694 0.5H695C699.142 0.5 702.5 3.85786 702.5 8V129.211L666.211 165.5H7.99998C3.85785 165.5 0.5 162.142 0.5 158Z"
             stroke="url(#paint0_linear_655_56)"
-            stroke-opacity="0.7"
+            strokeOpacity="0.7"
           />
         </>
       ) : (
@@ -35,12 +35,12 @@ export const AccordionBorder = (props: AccordionBorderProps) => {
           <path
             d="M0 54V27.6623L26.6623 0H695C699.418 0 703 3.58172 703 8V35.418L673.418 62H7.99998C3.58171 62 0 58.4183 0 54Z"
             fill="white"
-            fill-opacity="0.05"
+            fillOpacity="0.05"
           />
           <path
             d="M0.5 54V27.864L26.8748 0.5H695C699.142 0.5 702.5 3.85786 702.5 8V35.1951L673.226 61.5H7.99998C3.85785 61.5 0.5 58.1421 0.5 54Z"
             stroke="url(#paint0_linear_655_56)"
-            stroke-opacity="0.7"
+            strokeOpacity="0.7"
           />
         </>
       )}
@@ -54,8 +54,8 @@ export const AccordionBorder = (props: AccordionBorderProps) => {
           y2="240.589"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#15BFFD" />
-          <stop offset="1" stop-color="#9C37FD" />
+          <stop stopColor="#15BFFD" />
+          <stop offset="1" stopColor="#9C37FD" />
         </linearGradient>
       </defs>
     </svg>

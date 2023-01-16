@@ -11,6 +11,9 @@ import { HStack, VStack } from "@/shared/ui/Stack"
 import { Avatar } from "@/shared/ui/Avatar/Avatar"
 import { ProfileCard } from "@/entities/Profile"
 import { Accordion } from "@/shared/ui/Accordion"
+import { Inter } from "@next/font/google"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
   return (
@@ -27,6 +30,7 @@ export default function Home() {
           color: "white",
           padding: 16,
         }}
+        className={inter.className}
       >
         <VStack gap="32">
           <div>
