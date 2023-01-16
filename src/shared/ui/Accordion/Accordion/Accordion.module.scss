@@ -1,0 +1,30 @@
+.wrapper {
+  position: relative;
+}
+.Accordion {
+  position: absolute;
+  top: 0;
+  width: calc(100% - 24px - 24px);
+  padding: 16.5px 24px;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.details {
+  display: none;
+}
+
+.open {
+  &.Accordion {
+    padding-top: 27.5px;
+    padding-bottom: 27.5px;
+  }
+
+  .details {
+    display: inherit;
+  }
+}

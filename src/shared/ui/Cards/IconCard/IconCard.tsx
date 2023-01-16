@@ -4,8 +4,11 @@ import angular from "@/shared/assets/icons/angular.png"
 import react from "@/shared/assets/icons/react.png"
 import vue from "@/shared/assets/icons/vue.png"
 import javascript from "@/shared/assets/icons/javascript.png"
-import { VStack } from "../../Stack"
-import { Typography, TypographyVariants } from "../../Typography/Typography"
+import { VStack } from "@/shared/ui/Stack"
+import {
+  Typography,
+  TypographyVariants,
+} from "@/shared/ui/Typography/Typography"
 import { StaticImageData } from "next/image"
 import { ShapedBorder } from "@/shared/ui/ShapedBorder/ShapedBorder"
 

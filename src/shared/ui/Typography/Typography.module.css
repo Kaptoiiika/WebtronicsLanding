@@ -12,21 +12,27 @@
 
 .variantH1 {
   font-size: 150px;
+  line-height: 120%;
 }
 .variantH2 {
   font-size: 72px;
+  line-height: 120%;
 }
 .variantH3 {
   font-size: 32px;
+  line-height: 120%;
 }
 .variantH4 {
   font-size: 24px;
+  line-height: 120%;
 }
 .variantP1 {
   font-size: 16px;
+  line-height: 140%;
 }
 .variantP2 {
   font-size: 14px;
+  line-height: 140%;
 }
 
 .oneLine {

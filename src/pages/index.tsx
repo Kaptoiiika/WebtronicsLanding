@@ -10,6 +10,7 @@ import { IconCard, InfoCard } from "@/shared/ui/Cards"
 import { HStack, VStack } from "@/shared/ui/Stack"
 import { Avatar } from "@/shared/ui/Avatar/Avatar"
 import { ProfileCard } from "@/entities/Profile"
+import { Accordion } from "@/shared/ui/Accordion"
 
 export default function Home() {
   return (
@@ -75,6 +76,17 @@ export default function Home() {
             <IconCard icon="React" />
             <IconCard icon="JavaScript" />
           </HStack>
+          <div>
+            <Accordion
+              title="What is the price?"
+              details="Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too."
+              open
+            />
+            <Accordion
+              title="What is the price?"
+              details="Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too."
+            />
+          </div>
         </VStack>
       </main>
     </>

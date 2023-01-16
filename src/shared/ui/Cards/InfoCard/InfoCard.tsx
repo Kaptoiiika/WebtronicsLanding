@@ -6,7 +6,7 @@ import {
   Typography,
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
-import { ShapedBorder } from "../../ShapedBorder/ShapedBorder"
+import { ShapedBorder } from "@/shared/ui/ShapedBorder/ShapedBorder"
 
 type InfoCardProps = {
   headerTitle: string
