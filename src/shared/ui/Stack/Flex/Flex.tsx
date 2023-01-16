@@ -1,11 +1,11 @@
-import { DetailsHTMLAttributes, memo, ReactNode } from "react"
+import { DetailsHTMLAttributes, ReactNode } from "react"
 import { classNames, classNamesMods } from "@/shared/lib/classNames/classNames"
 import styles from "./Flex.module.scss"
 
 export type FlexJustify = "start" | "center" | "end" | "between"
 export type FlexAlign = "start" | "center" | "end" | "stretch"
 export type FlexDirection = "row" | "column"
-export type FlexGap = "4" | "8" | "16" | "32"
+export type FlexGap = "4" | "8" | "16" | "32" | "48"
 export type FlexWrap = "wrap" | "nowrap"
 
 const justifyClasses: Record<FlexJustify, string> = {
@@ -32,6 +32,7 @@ const gapClasses: Record<FlexGap, string> = {
   8: styles.gap8,
   16: styles.gap16,
   32: styles.gap32,
+  48: styles.gap48,
 }
 
 const wrapClasses: Record<FlexWrap, string> = {

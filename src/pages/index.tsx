@@ -1,11 +1,6 @@
 import Head from "next/head"
-
-import { Inter } from "@next/font/google"
-import { Avatar } from "@/shared/ui/Avatar/Avatar"
-import { Accordion } from "@/shared/ui/Accordion"
-import { VStack } from "@/shared/ui/Stack"
-
-const inter = Inter({ subsets: ["latin"] })
+import { PageWrapper } from "@/widgets/PageWrapper/ui/PageWrapper/PageWrapper"
+import { Navbar } from "@/widgets/Navbar"
 
 export default function Home() {
   return (
@@ -16,12 +11,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={inter.className}>
-        <VStack>
-          <Accordion details="" title="" />
-          <Avatar />
-        </VStack>
-      </main>
+      <PageWrapper>
+        <Navbar />
+      </PageWrapper>
     </>
   )
 }
