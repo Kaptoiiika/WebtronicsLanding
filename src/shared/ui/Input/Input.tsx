@@ -1,6 +1,6 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
-import borderWrapper from "@/shared/styles/BorderWrapper.module.css"
 import { InputHTMLAttributes } from "react"
+import { ShapedBorder } from "@/shared/ui/ShapedBorder/ShapedBorder"
 import { VStack } from "../Stack"
 import styles from "./Input.module.css"
 
@@ -12,18 +12,18 @@ type InputProps = {
 
 export const Input = (props: InputProps) => {
   const { className, disabled, error, ...inputProps } = props
+
   return (
-    <VStack>
-      <input
-        {...inputProps}
-        disabled={disabled}
-        className={classNames(
-          [className, styles.input, borderWrapper["border-wrapper"]],
-          {
+    <VStack gap="4">
+      <ShapedBorder color={error ? "red" : "gradient"}>
+        <input
+          {...inputProps}
+          disabled={disabled}
+          className={classNames([className, styles.input], {
             [styles.error]: !!error,
-          }
-        )}
-      />
+          })}
+        />
+      </ShapedBorder>
       {error && <label>{error}</label>}
     </VStack>
   )

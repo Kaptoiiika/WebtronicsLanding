@@ -6,10 +6,10 @@ import {
 import { Button } from "@/shared/ui/Button/Button"
 import { Arrow } from "@/shared/ui/Arrows/Arrow"
 import { Input } from "@/shared/ui/Input/Input"
-import { Card } from "@/shared/ui/Card/Card"
-import { VStack } from "@/shared/ui/Stack"
+import { IconCard, InfoCard } from "@/shared/ui/Cards"
+import { HStack, VStack } from "@/shared/ui/Stack"
 import { Avatar } from "@/shared/ui/Avatar/Avatar"
-import { ProfileCard } from "@/entities/Profile/ui/ProfileCard/ProfileCard"
+import { ProfileCard } from "@/entities/Profile"
 
 export default function Home() {
   return (
@@ -29,26 +29,6 @@ export default function Home() {
       >
         <VStack gap="32">
           <div>
-            <Typography variant={TypographyVariants.H1}>
-              TypographyVariants.H1
-            </Typography>
-            <Typography variant={TypographyVariants.H2}>
-              TypographyVariants.H2
-            </Typography>
-            <Typography variant={TypographyVariants.H3}>
-              TypographyVariants.H3
-            </Typography>
-            <Typography variant={TypographyVariants.H4}>
-              TypographyVariants.H4
-            </Typography>
-            <Typography variant={TypographyVariants.P1}>
-              TypographyVariants.P1
-            </Typography>
-            <Typography variant={TypographyVariants.P2}>
-              TypographyVariants.P2
-            </Typography>
-          </div>
-          <div>
             <Button>default</Button>
             <Button>hover</Button>
             <Button>active</Button>
@@ -66,12 +46,12 @@ export default function Home() {
             <Input defaultValue={"asdasd"} disabled />
           </div>
           <div>
-            <Card
+            <InfoCard
               headerTitle="Step1"
               title="Introduction to Front-End"
               content="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. "
             />
-            <Card
+            <InfoCard
               headerTitle="Step2"
               title="Introduction to Front-End"
               content="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. "
@@ -89,6 +69,12 @@ export default function Home() {
               }}
             />
           </div>
+          <HStack gap="8">
+            <IconCard icon="Angular" />
+            <IconCard icon="Vue.js" />
+            <IconCard icon="React" />
+            <IconCard icon="JavaScript" />
+          </HStack>
         </VStack>
       </main>
     </>

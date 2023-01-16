@@ -14,7 +14,7 @@ type ProfileCardProps = {
 export const ProfileCard = (props: ProfileCardProps) => {
   const { avatar, bio, name, status } = props.profile
   return (
-    <VStack gap="16" className={styles.ProfileCard}>
+    <VStack gap="16" align="center" className={styles.ProfileCard}>
       <Avatar src={avatar} />
       <VStack gap="4">
         <Typography variant={TypographyVariants.H4}>{name}</Typography>

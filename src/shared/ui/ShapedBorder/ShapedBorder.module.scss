@@ -1,0 +1,39 @@
+.ShapedBorder {
+  display: flex;
+  border-radius: 8px;
+  background: var(--color-clean-5);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    border: solid transparent;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.borderWidth1:before {
+  border-width: 1px;
+}
+
+.borderWidth4:before {
+  border-width: 4px;
+}
+
+.borderColorRed:before {
+  background: rgba(253, 70, 70, 1) border-box;
+}
+
+.borderColorGradient:before {
+  background: var(--color-gradient) border-box;
+}

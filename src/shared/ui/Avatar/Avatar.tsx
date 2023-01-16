@@ -1,6 +1,6 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
 import styles from "./Avatar.module.css"
-import borderWrapper from "@/shared/styles/BorderWrapper.module.css"
+import { ShapedBorder } from "@/shared/ui/ShapedBorder/ShapedBorder"
 
 type AvatarProps = {
   src?: string
@@ -9,9 +9,8 @@ type AvatarProps = {
 export const Avatar = (props: AvatarProps) => {
   const { src } = props
   return (
-    <img
-      className={classNames([borderWrapper["border-wrapper"], styles.avatar])}
-      src={src}
-    />
+    <ShapedBorder circle borderWidth="4">
+      <img className={classNames([styles.avatar])} src={src} />
+    </ShapedBorder>
   )
 }
