@@ -23,7 +23,7 @@ export const Steps = () => {
           {StepsList.map((step) => (
             <>
               <HStack
-                className={classNames([styles.card, styles.left])}
+                className={styles.card}
                 key={step[0]}
                 align="center"
                 gap="24"
@@ -36,6 +36,7 @@ export const Steps = () => {
                 />
                 <ArrowAndCircle />
               </HStack>
+
               <HStack
                 className={classNames([styles.card, styles.right])}
                 key={step[1]}
