@@ -1,4 +1,3 @@
-import { classNames } from "@/shared/lib/classNames/classNames"
 import { Accordion } from "@/shared/ui/Accordion"
 import { HStack, VStack } from "@/shared/ui/Stack"
 import {

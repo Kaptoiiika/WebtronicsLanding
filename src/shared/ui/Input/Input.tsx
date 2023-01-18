@@ -14,8 +14,8 @@ export const Input = (props: InputProps) => {
   const { className, disabled, error, ...inputProps } = props
 
   return (
-    <VStack gap="4">
-      <ShapedBorder color={error ? "red" : "gradient"}>
+    <VStack gap="4" >
+      <ShapedBorder className={styles.border} color={error ? "red" : "gradient"}>
         <input
           {...inputProps}
           disabled={disabled}

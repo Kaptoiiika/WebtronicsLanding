@@ -1,3 +1,4 @@
+export { ContacUs } from "./ContacUs/ContacUs";
 export { AboutUs } from "./AboutUs/AboutUs";
 export { FAQ } from "./FAQ/FAQ";
 export { Gallery } from "./Gallery/Gallery";

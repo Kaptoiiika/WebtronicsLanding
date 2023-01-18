@@ -9,6 +9,7 @@ import {
   ProgrammingTechnogies,
   Review,
   Steps,
+  ContacUs,
 } from "@/widgets/Landing"
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
           <FAQ />
           <Review />
           <Gallery />
+          <ContacUs />
         </div>
       </PageWrapper>
     </>
