@@ -7,6 +7,7 @@ import {
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
 import { HStack, VStack } from "@/shared/ui/Stack"
+import { Fragment } from "react"
 
 const StepsList = [
   ["Step 1", "Step 2"],
@@ -21,13 +22,8 @@ export const Steps = () => {
         <Typography variant={TypographyVariants.H2}>Steps</Typography>
         <div className={styles.line}>
           {StepsList.map((step) => (
-            <>
-              <HStack
-                className={styles.card}
-                key={step[0]}
-                align="center"
-                gap="24"
-              >
+            <Fragment key={step[0] + step[1]}>
+              <HStack className={styles.card} align="center" gap="24">
                 <InfoCard
                   headerTitle={step[0]}
                   title="Introduction to Front-End "
@@ -39,7 +35,6 @@ export const Steps = () => {
 
               <HStack
                 className={classNames([styles.card, styles.right])}
-                key={step[1]}
                 align="center"
                 gap="24"
               >
@@ -50,7 +45,7 @@ export const Steps = () => {
                 />
                 <ArrowAndCircle className={styles.reverseArrow} />
               </HStack>
-            </>
+            </Fragment>
           ))}
         </div>
       </VStack>

@@ -40,7 +40,7 @@ type TypographyProps = {
   variant?: TypographyVariants
 } & PropsWithChildren
 
-export const Typography = (props: TypographyProps) => {
+export const Typography = memo((props: TypographyProps) => {
   const {
     className,
     children,
@@ -62,4 +62,4 @@ export const Typography = (props: TypographyProps) => {
       {children}
     </HeaderTag>
   )
-}
+})

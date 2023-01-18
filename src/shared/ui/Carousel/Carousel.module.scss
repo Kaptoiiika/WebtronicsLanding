@@ -1,0 +1,27 @@
+.left {
+  margin-top: 124px;
+}
+
+.imageList {
+  display: grid;
+  grid-template-areas: "selected b c";
+  grid-template-columns: 392px 184px 184px;
+  grid-template-rows: 420px;
+  grid-gap: 24px;
+}
+
+.currentItem {
+  grid-area: selected;
+}
+
+.imageContainer {
+  border-radius: 16px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center top;
+  object-fit: cover;
+}

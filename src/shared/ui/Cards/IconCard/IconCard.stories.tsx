@@ -10,22 +10,22 @@ const Template: ComponentStory<typeof IconCard> = (args) => (
   <IconCard {...args}></IconCard>
 )
 
-export const Angular = Template.bind({})
-Angular.args = {
+export const FrameworkAngular = Template.bind({})
+FrameworkAngular.args = {
   icon: "Angular",
 }
 
-export const JavaScript = Template.bind({})
-JavaScript.args = {
+export const FrameworkJavaScript = Template.bind({})
+FrameworkJavaScript.args = {
   icon: "JavaScript",
 }
 
-export const Vue = Template.bind({})
-Vue.args = {
+export const FrameworkVue = Template.bind({})
+FrameworkVue.args = {
   icon: "Vue.js",
 }
 
-export const React = Template.bind({})
-React.args = {
+export const FrameworkReact = Template.bind({})
+FrameworkReact.args = {
   icon: "React",
 }

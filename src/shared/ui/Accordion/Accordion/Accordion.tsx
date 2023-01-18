@@ -1,5 +1,5 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
-import { MouseEvent, useCallback } from "react"
+import { memo, MouseEvent, useCallback } from "react"
 import { HStack, VStack } from "@/shared/ui/Stack"
 import Minus from "@/shared/assets/icons/minus.svg"
 import Plus from "@/shared/assets/icons/plus.svg"
@@ -14,16 +14,16 @@ type AccordionProps = {
   title: string
   details: string
   open?: boolean
-  onOpen?: () => void
+  onOpen?: (e: MouseEvent<HTMLDivElement | HTMLButtonElement>) => void
 }
 
-export const Accordion = (props: AccordionProps) => {
+export const Accordion = memo((props: AccordionProps) => {
   const { details, title, open, onOpen } = props
 
   const collapseHundle = useCallback(
     (e: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
       e.stopPropagation()
-      onOpen?.()
+      onOpen?.(e)
     },
     [onOpen]
   )
@@ -55,4 +55,4 @@ export const Accordion = (props: AccordionProps) => {
       </VStack>
     </div>
   )
-}
+})

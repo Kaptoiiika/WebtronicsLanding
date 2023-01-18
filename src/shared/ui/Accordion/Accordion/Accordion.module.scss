@@ -7,6 +7,26 @@
   top: 0;
   width: calc(100% - 24px - 24px);
   padding: 16.5px 24px;
+  &::before {
+    backdrop-filter: blur(5px);
+    background: linear-gradient(
+      152.14deg,
+      rgba(21, 191, 253, 0.7) 9.96%,
+      rgba(156, 55, 253, 0.7)
+    );
+    -webkit-clip-path: polygon(
+      32px 0,
+      100% 0,
+      100% calc(100% - 32px),
+      calc(100% - 32px) 100%,
+      0 100%,
+      0 32px
+    );
+    /* clip-path: polygon(32px 0,100% 0,100% calc(100% - 32px),calc(100% - 32px) 100%,0 100%,0 32px); */
+    position: relative;
+    padding: 16.5px 24px;
+    border-radius: 8px;
+  }
 }
 
 .toggleButton {

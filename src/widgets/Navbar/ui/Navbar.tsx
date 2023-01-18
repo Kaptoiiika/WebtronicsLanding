@@ -13,19 +13,19 @@ export const Navbar = () => {
       <HStack className={styles.Navbar} justify="between">
         <LogoWebtronics />
         <nav className={styles.links}>
-          <Link href={"#about"}>
+          <Link href={"/#about"}>
             <Typography variant={TypographyVariants.P1}>About</Typography>
           </Link>
-          <Link href={"#programs"}>
+          <Link href={"/#programs"}>
             <Typography variant={TypographyVariants.P1}>Programs</Typography>
           </Link>
-          <Link href={"#steps"}>
+          <Link href={"/#steps"}>
             <Typography variant={TypographyVariants.P1}>Steps</Typography>
           </Link>
-          <Link href={"#questions"}>
+          <Link href={"/#questions"}>
             <Typography variant={TypographyVariants.P1}>Questions</Typography>
           </Link>
-          <Link href={"#getintouch"}>
+          <Link href={"/#getintouch"}>
             <Typography variant={TypographyVariants.P1}>
               Get in touch
             </Typography>
