@@ -37,7 +37,7 @@ export const AboutUs = () => {
   return (
     <section>
       <VStack align="center">
-        <Typography variant={TypographyVariants.H2}>AboutUs</Typography>
+        <Typography variant={TypographyVariants.H2} className={styles.title}>About Us</Typography>
 
         <HStack align="stretch" gap="16">
           <VStack align="center">

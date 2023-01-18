@@ -1,5 +1,5 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
-import { useCallback, useState } from "react"
+import { MouseEvent, useCallback } from "react"
 import { HStack, VStack } from "@/shared/ui/Stack"
 import Minus from "@/shared/assets/icons/minus.svg"
 import Plus from "@/shared/assets/icons/plus.svg"
@@ -20,9 +20,13 @@ type AccordionProps = {
 export const Accordion = (props: AccordionProps) => {
   const { details, title, open, onOpen } = props
 
-  const collapseHundle = useCallback(() => {
-    onOpen?.()
-  }, [onOpen])
+  const collapseHundle = useCallback(
+    (e: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
+      e.stopPropagation()
+      onOpen?.()
+    },
+    [onOpen]
+  )
 
   return (
     <div className={styles.wrapper}>
@@ -31,13 +35,17 @@ export const Accordion = (props: AccordionProps) => {
         className={classNames(styles.Accordion, {
           [styles.open]: open,
         })}
-        onClick={collapseHundle}
         gap="16"
       >
-        <HStack fullWidth className={styles.title} justify="between">
+        <HStack
+          onClick={collapseHundle}
+          fullWidth
+          className={styles.title}
+          justify="between"
+        >
           <Typography variant={TypographyVariants.H4}>{title}</Typography>
           <button className={styles.toggleButton} onClick={collapseHundle}>
-            {open ? <Plus /> : <Minus />}
+            {open ? <Minus /> : <Plus />}
           </button>
         </HStack>
 

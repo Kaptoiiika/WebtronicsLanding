@@ -1,4 +1,10 @@
 .Navbar {
   max-width: var(--app-max-width);
-  margin: 1em auto;
+  margin: 40px auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 48px;
 }

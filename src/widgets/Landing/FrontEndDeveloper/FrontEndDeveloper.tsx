@@ -1,4 +1,3 @@
-import { classNames } from "@/shared/lib/classNames/classNames"
 import { Button } from "@/shared/ui/Button/Button"
 import { HStack, VStack } from "@/shared/ui/Stack"
 import {
@@ -7,6 +6,7 @@ import {
 } from "@/shared/ui/Typography/Typography"
 import styles from "./FrontEndDeveloper.module.scss"
 import programmerWorking from "@/shared/assets/images/programmer-working.png"
+import Image from "next/image"
 
 export const FrontEndDeveloper = () => {
   return (
@@ -32,7 +32,11 @@ export const FrontEndDeveloper = () => {
         </Typography>
       </HStack>
 
-      <img className={styles.background} src={programmerWorking.src} />
+      <Image
+        alt="programmerWorking"
+        className={styles.background}
+        src={programmerWorking}
+      />
     </VStack>
   )
 }

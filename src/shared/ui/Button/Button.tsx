@@ -11,7 +11,6 @@ export const Button = (props: ButtonProps) => {
   const { className, children, disabled, ...buttonProps } = props
   return (
     <button
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...buttonProps}
       className={classNames([className, styles.button])}
       disabled={disabled}

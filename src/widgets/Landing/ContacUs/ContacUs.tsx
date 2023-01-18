@@ -10,7 +10,7 @@ import styles from "./ContacUs.module.scss"
 
 export const ContacUs = () => {
   return (
-    <section>
+    <section className={styles.ContacUs}>
       <ShapedBorder className={styles.border}>
         <VStack className={styles.form} align="stretch" gap="24">
           <VStack align="center" gap="16">

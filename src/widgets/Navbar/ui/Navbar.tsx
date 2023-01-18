@@ -12,8 +12,7 @@ export const Navbar = () => {
     <header>
       <HStack className={styles.Navbar} justify="between">
         <LogoWebtronics />
-
-        <HStack gap="48" align="center">
+        <nav className={styles.links}>
           <Link href={"#about"}>
             <Typography variant={TypographyVariants.P1}>About</Typography>
           </Link>
@@ -31,7 +30,7 @@ export const Navbar = () => {
               Get in touch
             </Typography>
           </Link>
-        </HStack>
+        </nav>
       </HStack>
     </header>
   )

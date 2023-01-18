@@ -11,6 +11,7 @@ import {
   Steps,
   ContacUs,
 } from "@/widgets/Landing"
+import { Footer } from "@/widgets/Footer"
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
 
       <Navbar />
       <PageWrapper>
-        <div style={{ display: "flex", flexDirection: "column", gap: "200px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "180px" }}>
           <FrontEndDeveloper />
           <AboutUs />
           <ProgrammingTechnogies />
@@ -35,6 +36,7 @@ export default function Home() {
           <ContacUs />
         </div>
       </PageWrapper>
+      <Footer />
     </>
   )
 }

@@ -9,6 +9,7 @@ import developer1 from "@/shared/assets/images/developer 1.png"
 import developer2 from "@/shared/assets/images/developer 2.png"
 import developer3 from "@/shared/assets/images/developer 3.png"
 import developer4 from "@/shared/assets/images/developer 4.png"
+import Image from "next/image"
 
 export const Gallery = () => {
   return (
@@ -24,15 +25,17 @@ export const Gallery = () => {
             your very own Google Chrome extension! In this course we will focus
             on coding exercises and projects.
           </Typography>
-          <img
+          <Image
             className={classNames([styles.images, styles.bigimage])}
-            src={developer1.src}
+            src={developer1}
+            alt="developer1"
           />
-          <img className={styles.images} src={developer2.src} />
-          <img className={styles.images} src={developer3.src} />
-          <img
+          <Image className={styles.images} src={developer2} alt="developer2" />
+          <Image className={styles.images} src={developer3} alt="developer3" />
+          <Image
             className={classNames([styles.images, styles.mediumimage])}
-            src={developer4.src}
+            src={developer4}
+            alt="developer4"
           />
           <Typography
             className={styles.textBottom}

@@ -8,12 +8,12 @@ import {
   Typography,
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
-import { StaticImageData } from "next/image"
+import Image, { StaticImageData } from "next/image"
 import IconCardBorder from "./IconCardBorder.svg"
 
 export type IconType = "Angular" | "React" | "Vue.js" | "JavaScript"
 
-const IconSrc: Record<IconType, StaticImageData> = {
+const Icons: Record<IconType, StaticImageData> = {
   Angular: angular,
   React: react,
   JavaScript: javascript,
@@ -27,13 +27,13 @@ type IconCardProps = {
 export const IconCard = (props: IconCardProps) => {
   const { icon } = props
 
-  const { src } = IconSrc[icon]
+  const CurrentIcon = Icons[icon]
 
   return (
     <div className={styles.wrapper}>
       <IconCardBorder />
       <VStack className={styles.IconCard} gap="16" align="center">
-        <img src={src} alt={icon} className={styles.icon} />
+        <Image src={CurrentIcon} alt={icon} className={styles.icon} />
         <Typography variant={TypographyVariants.H4}>{icon}</Typography>
       </VStack>
     </div>

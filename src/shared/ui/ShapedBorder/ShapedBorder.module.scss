@@ -3,7 +3,8 @@
   border-radius: 8px;
   background: var(--color-clean-5);
   position: relative;
-
+  backdrop-filter: blur(5px);
+  
   &::before {
     content: "";
     position: absolute;
@@ -13,7 +14,8 @@
     bottom: 0;
     border-radius: inherit;
     border: solid transparent;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
     mask-composite: exclude;
     -webkit-mask-composite: xor;
     pointer-events: none;

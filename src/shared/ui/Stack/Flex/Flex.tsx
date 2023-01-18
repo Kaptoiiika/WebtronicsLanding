@@ -63,6 +63,8 @@ export const Flex = (props: FlexProps) => {
     gap,
     wrap,
     fullWidth,
+
+    ...divprops
   } = props
 
   const classes = [
@@ -79,5 +81,9 @@ export const Flex = (props: FlexProps) => {
     [styles.fullWidth]: fullWidth,
   }
 
-  return <div className={classNames(classes, mods)}>{children}</div>
+  return (
+    <div className={classNames(classes, mods)} {...divprops}>
+      {children}
+    </div>
+  )
 }

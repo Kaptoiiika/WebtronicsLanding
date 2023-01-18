@@ -9,30 +9,41 @@
 .align-center {
   text-align: center;
 }
-
 .variantH1 {
+  font-family: var(--font-clash-display);
   font-size: 150px;
   line-height: 120%;
+  font-weight: 600;
 }
 .variantH2 {
+  font-family: var(--font-clash-display);
   font-size: 72px;
   line-height: 120%;
+  font-weight: 600;
 }
 .variantH3 {
+  font-family: var(--font-clash-display);
   font-size: 32px;
   line-height: 120%;
+  font-weight: 600;
 }
 .variantH4 {
+  font-family: var(--font-clash-display);
   font-size: 24px;
   line-height: 120%;
+  font-weight: 500;
 }
 .variantP1 {
+  font-family: var(--font-inter);
   font-size: 16px;
   line-height: 140%;
+  font-weight: 400;
 }
 .variantP2 {
+  font-family: var(--font-inter);
   font-size: 14px;
   line-height: 140%;
+  font-weight: 400;
 }
 
 .oneLine {
