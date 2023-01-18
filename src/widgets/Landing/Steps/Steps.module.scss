@@ -1,0 +1,27 @@
+.line {
+  margin-top: 165px;
+  width: 4px;
+  background: var(--color-linear-2);
+  position: relative;
+  height: 860px;
+}
+
+.card {
+  min-width: 620px;
+  transform: translate(-601px, 0);
+}
+
+.left {
+  height: 0;
+}
+
+.right {
+  min-width: 620px;
+  margin-bottom: 148px;
+  transform: translate(-15px, 0);
+  flex-direction: row-reverse;
+}
+
+.reverseArrow {
+  transform: rotate(180deg);
+}
