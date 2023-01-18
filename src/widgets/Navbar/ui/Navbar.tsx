@@ -5,16 +5,14 @@ import {
   Typography,
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
+import styles from "./Navbar.module.scss"
 
-type NavbarProps = {
-  className?: string
-}
-
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = () => {
   return (
     <header>
-      <HStack justify="between">
+      <HStack className={styles.Navbar} justify="between">
         <LogoWebtronics />
+
         <HStack gap="48" align="center">
           <Link href={"#about"}>
             <Typography variant={TypographyVariants.P1}>About</Typography>

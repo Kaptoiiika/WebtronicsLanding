@@ -1,0 +1,35 @@
+.container {
+  margin-top: 100px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 16, 45, 0) -4.71%,
+    #0c102d 97.38%
+  );
+  z-index: -1;
+}
+
+.FrontEnd {
+  flex-shrink: 0;
+}
+.developer {
+  margin-top: -24px;
+}
+
+.slogan {
+  width: 360px;
+  margin-left: 58px;
+  margin-bottom: 30px;
+}
+
+.courses {
+  margin-right: 230px;
+  margin-bottom: -8px;
+}
