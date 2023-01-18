@@ -10,7 +10,6 @@ import {
   Review,
   Steps,
 } from "@/widgets/Landing"
-import { VStack } from "@/shared/ui/Stack"
 
 export default function Home() {
   return (
