@@ -25,7 +25,7 @@ export const FAQ = () => {
 
   const hundleOpen = useCallback(
     (index: number) => () => setIndexOpen(index),
-    []
+    [setIndexOpen]
   )
 
   return (
