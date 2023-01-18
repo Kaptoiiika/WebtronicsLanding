@@ -1,3 +1,5 @@
+export { LandingSections } from "./LandingSections";
+
 export { ContacUs } from "./ContacUs/ContacUs";
 export { AboutUs } from "./AboutUs/AboutUs";
 export { FAQ } from "./FAQ/FAQ";

@@ -11,6 +11,8 @@ import FrontEndSvg from "./Front-End.svg"
 import WadeWarren from "@/shared/assets/images/Wade Warren.png"
 import KristinWatson from "@/shared/assets/images/Kristin Watson.png"
 import RobertFox from "@/shared/assets/images/Robert Fox.png"
+import { memo } from "react"
+import { LandingSections } from "../LandingSections"
 
 const ProfileList: ProfileModel[] = [
   {
@@ -33,11 +35,13 @@ const ProfileList: ProfileModel[] = [
   },
 ]
 
-export const AboutUs = () => {
+export const AboutUs = memo(() => {
   return (
-    <section>
+    <section id={LandingSections.ABOUT}>
       <VStack align="center">
-        <Typography variant={TypographyVariants.H2} className={styles.title}>About Us</Typography>
+        <Typography variant={TypographyVariants.H2} className={styles.title}>
+          About Us
+        </Typography>
 
         <HStack align="stretch" gap="16">
           <VStack align="center">
@@ -69,4 +73,4 @@ export const AboutUs = () => {
       </VStack>
     </section>
   )
-}
+})

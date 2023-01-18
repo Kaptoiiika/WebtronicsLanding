@@ -4,11 +4,13 @@ import {
   Typography,
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
+import { memo } from "react"
+import { LandingSections } from "../LandingSections"
 import styles from "./ProgrammingTechnogies.module.scss"
 
-export const ProgrammingTechnogies = () => {
+export const ProgrammingTechnogies = memo(() => {
   return (
-    <section>
+    <section id={LandingSections.PROGRAMMINGTECH}>
       <pre className={styles.title}>
         <VStack align="center" gap="16">
           <Typography variant={TypographyVariants.H2}>
@@ -28,4 +30,4 @@ export const ProgrammingTechnogies = () => {
       </HStack>
     </section>
   )
-}
+})

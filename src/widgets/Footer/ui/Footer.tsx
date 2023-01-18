@@ -1,5 +1,4 @@
-import { classNames } from "@/shared/lib/classNames/classNames"
-import { HStack, VStack } from "@/shared/ui/Stack"
+import { VStack } from "@/shared/ui/Stack"
 import styles from "./Footer.module.scss"
 import LogoWebtronics from "@/shared/assets/icons/logoWebtronics.svg"
 import {
@@ -53,6 +52,8 @@ export const Footer = () => {
           <Typography bold variant={TypographyVariants.P1}>
             Social media
           </Typography>
+
+          <Link href={"/SCAM"}></Link>
         </VStack>
       </div>
     </footer>

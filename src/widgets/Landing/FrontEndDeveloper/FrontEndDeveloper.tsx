@@ -7,8 +7,9 @@ import {
 import styles from "./FrontEndDeveloper.module.scss"
 import programmerWorking from "@/shared/assets/images/programmer-working.png"
 import Image from "next/image"
+import { memo } from "react"
 
-export const FrontEndDeveloper = () => {
+export const FrontEndDeveloper = memo(() => {
   return (
     <VStack className={styles.container}>
       <HStack align="end">
@@ -39,4 +40,4 @@ export const FrontEndDeveloper = () => {
       />
     </VStack>
   )
-}
+})

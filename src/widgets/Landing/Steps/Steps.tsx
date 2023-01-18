@@ -7,7 +7,8 @@ import {
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
 import { HStack, VStack } from "@/shared/ui/Stack"
-import { Fragment } from "react"
+import { Fragment, memo } from "react"
+import { LandingSections } from "../LandingSections"
 
 const StepsList = [
   ["Step 1", "Step 2"],
@@ -15,9 +16,9 @@ const StepsList = [
   ["Step 5", "Step 6"],
 ]
 
-export const Steps = () => {
+export const Steps = memo(() => {
   return (
-    <section>
+    <section id={LandingSections.STEPS}>
       <VStack align="center">
         <Typography variant={TypographyVariants.H2}>Steps</Typography>
         <div className={styles.line}>
@@ -51,4 +52,4 @@ export const Steps = () => {
       </VStack>
     </section>
   )
-}
+})

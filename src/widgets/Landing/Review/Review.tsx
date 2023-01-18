@@ -1,5 +1,4 @@
 import { Carousel, CarouselItem } from "@/shared/ui/Carousel/Carousel"
-import styles from "./Review.module.scss"
 import Man1 from "@/shared/assets/images/man 1.png"
 import Man2 from "@/shared/assets/images/man 2.png"
 import Woman1 from "@/shared/assets/images/woman 1.png"
@@ -8,6 +7,8 @@ import {
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
 import { VStack } from "@/shared/ui/Stack"
+import { LandingSections } from "../LandingSections"
+import { memo } from "react"
 
 const ReviewItems: CarouselItem[] = [
   {
@@ -27,13 +28,13 @@ const ReviewItems: CarouselItem[] = [
   },
 ]
 
-export const Review = () => {
+export const Review = memo(() => {
   return (
-    <section>
+    <section id={LandingSections.REVIEW}>
       <VStack align="center" gap="48">
         <Typography variant={TypographyVariants.H2}>Review</Typography>
         <Carousel items={ReviewItems} />
       </VStack>
     </section>
   )
-}
+})

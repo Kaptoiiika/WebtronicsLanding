@@ -10,10 +10,12 @@ import developer2 from "@/shared/assets/images/developer 2.png"
 import developer3 from "@/shared/assets/images/developer 3.png"
 import developer4 from "@/shared/assets/images/developer 4.png"
 import Image from "next/image"
+import { memo } from "react"
+import { LandingSections } from "../LandingSections"
 
-export const Gallery = () => {
+export const Gallery = memo(() => {
   return (
-    <section>
+    <section id={LandingSections.GALLERY}>
       <VStack align="center" gap="48">
         <Typography variant={TypographyVariants.H2}>Gallery</Typography>
         <div className={styles.galleryGrid}>
@@ -52,4 +54,4 @@ export const Gallery = () => {
       </VStack>
     </section>
   )
-}
+})

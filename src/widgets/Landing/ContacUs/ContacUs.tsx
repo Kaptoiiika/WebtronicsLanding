@@ -1,16 +1,17 @@
 import { FeedbackForm } from "@/features/Feedback"
-import { classNames } from "@/shared/lib/classNames/classNames"
 import { ShapedBorder } from "@/shared/ui/ShapedBorder/ShapedBorder"
 import { VStack } from "@/shared/ui/Stack"
 import {
   Typography,
   TypographyVariants,
 } from "@/shared/ui/Typography/Typography"
+import { memo } from "react"
+import { LandingSections } from "../LandingSections"
 import styles from "./ContacUs.module.scss"
 
-export const ContacUs = () => {
+export const ContacUs = memo(() => {
   return (
-    <section className={styles.ContacUs}>
+    <section id={LandingSections.CONTACTUS} className={styles.ContacUs}>
       <ShapedBorder className={styles.border}>
         <VStack className={styles.form} align="stretch" gap="24">
           <VStack align="center" gap="16">
@@ -24,4 +25,4 @@ export const ContacUs = () => {
       </ShapedBorder>
     </section>
   )
-}
+})
