@@ -11,15 +11,27 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.linksGrid {
-  display: grid;
-  grid-gap: 16px;
+.address {
+  font-style: inherit;
 }
 
-.linksGroup {
+.titleGroup {
+  font-family: var(--font-roboto);
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  grid-column-start: 1;
-  grid-column-end: 3;
+}
+
+.companyLinks {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px 145px;
+  height: 100px;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
 }
