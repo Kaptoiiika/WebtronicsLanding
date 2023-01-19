@@ -6,11 +6,22 @@ import { Input } from "@/shared/ui/Input/Input"
 import { VStack } from "@/shared/ui/Stack"
 import { useCallback } from "react"
 import { useForm } from "react-hook-form"
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch"
+import { useDynamicModuleLoader } from "@/shared/lib/hooks/useDynamicModuleLoader/useDynamicModuleLoader"
 import { FeedbackFormModel } from "../model/types/FeedbackFormSchema"
+import { UploadFeedback } from "../model/services/UploadFeedback/UploadFeedback"
+import { useSelector } from "react-redux"
+import {
+  getFeedbackError,
+  getFeedbackLoading,
+} from "../model/selectors/feedbackFormSelectors"
+import { Typography } from "@/shared/ui/Typography/Typography"
+import { feedbackFormReducers } from "../model/slice/FeedbackFormSlice"
 
 type FeedbackFormProps = {
   className?: string
 }
+
 const responseSchema = yup
   .object({
     name: yup.string().required(),
@@ -20,16 +31,26 @@ const responseSchema = yup
   .required()
 
 export const FeedbackForm = (props: FeedbackFormProps) => {
+  useDynamicModuleLoader({
+    reducers: { feedbackForm: feedbackFormReducers },
+  })
   const { className } = props
+  const dispatch = useAppDispatch()
+  const isLoading = useSelector(getFeedbackLoading)
+  const uploadError = useSelector(getFeedbackError)
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FeedbackFormModel>({ resolver: yupResolver(responseSchema) })
 
-  const onSubmit = useCallback((data: FeedbackFormModel) => {
-    console.log("data", data)
-  }, [])
+  const onSubmit = useCallback(
+    (data: FeedbackFormModel) => {
+      dispatch(UploadFeedback(data)).then()
+    },
+    [dispatch]
+  )
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={className}>
@@ -53,7 +74,10 @@ export const FeedbackForm = (props: FeedbackFormProps) => {
           />
         </VStack>
 
-        <Button type="submit">Send</Button>
+        <Button type="submit" disabled={isLoading}>
+          Send
+        </Button>
+        {uploadError && <Typography>{uploadError}</Typography>}
       </VStack>
     </form>
   )

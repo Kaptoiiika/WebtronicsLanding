@@ -2,6 +2,7 @@ import type { AppProps } from "next/app"
 import { Inter, Roboto } from "@next/font/google"
 import localFont from "@next/font/local"
 import "@/app/styles/index.scss"
+import { StoreProvider } from "@/app/providers/StoreProvider"
 
 const clashDisplay = localFont({
   src: "../shared/assets/fonts/clash-display-variable.ttf",
@@ -11,7 +12,7 @@ const roboto = Roboto({
   weight: "700",
   subsets: ["latin"],
 })
-// "src/shared/assets/fonts/clash-display-variable.ttf"
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -23,7 +24,9 @@ export default function App({ Component, pageProps }: AppProps) {
           --font-roboto: ${roboto.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />
+      <StoreProvider>
+        <Component {...pageProps} />
+      </StoreProvider>
     </>
   )
 }

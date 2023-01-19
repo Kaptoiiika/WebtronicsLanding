@@ -1,5 +1,28 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Архитектура 
+
+- src/
+  - app/  Используется для настйроки стора, типов и глобальных стилей
+    - styles/
+    - types/
+    - providers/ 
+  - pages/ Обычный для Next папка pages 
+  - widgets/   самостоятельные компоненты такие как header footer 
+  - features/   все компоненты с бизнес логикой например, форма отправки отзыва, смена темы на темную, сортировка списка и т.д.
+  - entities/ бизнес сущности, информация пользователей, коментарии, статьи,  
+  - shared/ для обще доступных комопонетов и функций
+    - api/ здесь находится инстанты axios, rtkQuery и их конфигураций
+    - assets/ статические файлы 
+    - lib/ утилиты, хуки
+    - ui/ UI библиотека компонентов из которых состоит все приложение
+
+
+## Конфиги
+Был добавлен storybook для более удобной верстки элементов + если еще добавить loki можно будет делать скриншотные тесты
+Не был настроен Jest так как мне было просто лень( 
+Был настроен [Redux (Store)](/docs/store.md) 
+
 ## Getting Started Server
 
 First, run the server:
@@ -15,6 +38,7 @@ The server for interacting with the API will be running on http:localhost:3004
 To get contacts, use a GET request to http:localhost:3004/feedback
 
 To create contact, use a POST request to http:localhost:3004/feedback
+
 ```
   {
     "name": string,
