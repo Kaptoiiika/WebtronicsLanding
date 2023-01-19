@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended"],
+  extends: ["plugin:react/recommended", "plugin:storybook/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -31,7 +31,12 @@ module.exports = {
     ],
     "react/jsx-props-no-spreading": "off",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["warn", { args: "after-used" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        args: "after-used",
+      },
+    ],
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",

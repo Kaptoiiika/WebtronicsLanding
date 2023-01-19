@@ -2,7 +2,6 @@ import { classNames } from "@/shared/lib/classNames/classNames"
 import Image, { StaticImageData } from "next/image"
 import { useCallback, useState } from "react"
 import { Arrow } from "../Arrows/Arrow"
-import { ShapedBorder } from "../ShapedBorder/ShapedBorder"
 import { HStack, VStack } from "../Stack"
 import { Typography, TypographyVariants } from "../Typography/Typography"
 import styles from "./Carousel.module.scss"
@@ -66,7 +65,7 @@ export const Carousel = (props: CarouselProps) => {
 
         <div className={styles.imageList}>
           {items.map((item, index) => (
-            <ShapedBorder
+            <div
               className={classNames(styles.imageContainer, {
                 [styles.currentItem]: index === currentIndex,
               })}
@@ -77,7 +76,7 @@ export const Carousel = (props: CarouselProps) => {
                 src={item.image}
                 alt={item.text}
               />
-            </ShapedBorder>
+            </div>
           ))}
         </div>
       </VStack>

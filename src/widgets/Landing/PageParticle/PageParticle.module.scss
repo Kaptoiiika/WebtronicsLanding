@@ -1,0 +1,15 @@
+.container {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  overflow: visible;
+  width: 100%;
+  z-index: -1;
+}
+
+.wrapper {
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}

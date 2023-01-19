@@ -1,3 +1,8 @@
+$originalPathBig: "M 394 17 L 394 350.031 C 394 354.351 392.356 358.508 389.402 361.659 L 335.988 418.628 C 332.774 422.055 328.285 424 323.586 424 L 17 424 C 7.611 424 0 416.389 0 407 L 0 17 C 0 7.611 7.611 0 17 0 L 377 0 C 386.389 0 394 7.611 394 17 Z";
+$reducedPathBig: "M 392.5 18.38 L 392.5 349.053 C 392.5 353.343 390.868 357.47 387.938 360.6 L 334.929 417.167 C 331.739 420.57 327.286 422.5 322.623 422.5 L 18.371 422.5 C 9.054 422.5 1.5 414.943 1.5 405.62 L 1.5 18.38 C 1.5 9.057 9.054 1.5 18.371 1.5 L 375.629 1.5 C 384.946 1.5 392.5 9.057 392.5 18.38 Z";
+$originalPathMed: "M 180.601 395.801 C 183.429 392.75 185 388.744 185 384.584 L 185 16.5 C 185 7.387 177.613 0 168.5 0 L 16.5 0 C 7.387 0 0 7.387 0 16.5 L 0 406.5 C 0 415.613 7.387 423 16.5 423 L 148.186 423 C 152.779 423 157.164 421.085 160.287 417.717 L 180.601 395.801 Z";
+$reducedPathMed: "M 178.197 394.494 C 180.962 391.465 182.5 387.487 182.5 383.357 L 182.5 17.883 C 182.5 8.835 175.273 1.5 166.356 1.5 L 17.644 1.5 C 8.727 1.5 1.5 8.835 1.5 17.883 L 1.5 405.117 C 1.5 414.166 8.727 421.5 17.644 421.5 L 146.482 421.5 C 150.975 421.5 155.266 419.599 158.321 416.255 L 178.197 394.494 Z";
+
 .left {
   margin-top: 124px;
 }
@@ -5,23 +10,48 @@
 .imageList {
   display: grid;
   grid-template-areas: "selected b c";
-  grid-template-columns: 392px 184px 184px;
-  grid-template-rows: 420px;
+  grid-template-columns: 394px 184px 184px;
+  grid-template-rows: 424px;
   grid-gap: 24px;
 }
 
-.currentItem {
-  grid-area: selected;
-}
-
 .imageContainer {
+  position: relative;
+  backdrop-filter: blur(5px);
   border-radius: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--color-gradient);
+    border-radius: inherit;
+    clip-path: path($originalPathMed);
+  }
 }
 
 .image {
+  position: absolute;
+  z-index: 1;
   width: 100%;
   height: 100%;
   border-radius: inherit;
   object-position: center top;
   object-fit: cover;
+  clip-path: path($reducedPathMed);
+}
+
+.currentItem {
+  grid-area: selected;
+
+  &::before {
+    clip-path: path($originalPathBig);
+  }
+
+  .image {
+    clip-path: path($reducedPathBig);
+  }
 }

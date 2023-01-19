@@ -10,6 +10,7 @@ import {
   Review,
   Steps,
   ContacUs,
+  PageParticle,
 } from "@/widgets/Landing"
 import { Footer } from "@/widgets/Footer"
 
@@ -36,6 +37,7 @@ export default function Home() {
           <ContacUs />
         </div>
       </PageWrapper>
+      <PageParticle />
       <Footer />
     </>
   )

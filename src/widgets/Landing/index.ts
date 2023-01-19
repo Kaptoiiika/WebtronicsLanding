@@ -1,3 +1,5 @@
+export { PageParticle } from "./PageParticle/PageParticle";
+
 export { LandingSections } from "./LandingSections";
 
 export { ContacUs } from "./ContacUs/ContacUs";

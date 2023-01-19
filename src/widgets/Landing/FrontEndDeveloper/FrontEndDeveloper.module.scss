@@ -1,5 +1,12 @@
 .container {
   margin-top: 115px;
+  width: 100%;
+  max-width: 1137px;
+}
+
+.backgroundContainer {
+  z-index: -1;
+  pointer-events: none;
 }
 
 .background {
@@ -8,10 +15,16 @@
   left: 0;
   width: 100%;
   height: 815px;
-  pointer-events: none;
-  overflow: hidden;
   object-fit: cover;
-  z-index: -1;
+}
+
+.backgroundBlur {
+  position: absolute;
+  width: 100%;
+  height: 815px;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0px -150px 100px 20px var(--color-bg);
 }
 
 .FrontEnd {
@@ -19,6 +32,7 @@
 }
 .developer {
   margin-top: -24px;
+  margin-left: -8px;
 }
 
 .slogan {
@@ -28,6 +42,6 @@
 }
 
 .courses {
-  margin-right: 230px;
+  text-align: right;
   margin-bottom: -8px;
 }

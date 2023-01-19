@@ -1,5 +1,4 @@
 const path = require("path")
-
 module.exports = {
   stories: ["../../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -19,7 +18,6 @@ module.exports = {
     //   use: ["@svgr/webpack"],
     // })
     config.resolve.extensions.push(".ts", ".tsx")
-
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": pathSrc,
@@ -34,21 +32,23 @@ module.exports = {
         "sass-loader",
       ],
     })
-
     config.module.rules = config.module.rules.map((rule) => {
       if (rule === "...") return rule
-
       if (/svg/.test(rule.test)) {
-        return { ...rule, exclude: /\.svg$/i }
+        return {
+          ...rule,
+          exclude: /\.svg$/i,
+        }
       }
-
       return rule
     })
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     })
-
     return config
+  },
+  docs: {
+    autodocs: true,
   },
 }

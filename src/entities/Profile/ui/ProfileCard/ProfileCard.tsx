@@ -15,7 +15,7 @@ type ProfileCardProps = {
 
 export const ProfileCard = (props: ProfileCardProps) => {
   const { className, profile } = props
-  const { avatar, bio, name, status } = profile
+  const { avatar, name, status } = profile
 
   return (
     <VStack

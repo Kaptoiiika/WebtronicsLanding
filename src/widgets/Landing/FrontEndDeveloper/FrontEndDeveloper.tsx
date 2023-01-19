@@ -32,12 +32,14 @@ export const FrontEndDeveloper = memo(() => {
           Courses
         </Typography>
       </HStack>
-
-      <Image
-        alt="programmerWorking"
-        className={styles.background}
-        src={programmerWorking}
-      />
+      <div className={styles.backgroundContainer}>
+        <Image
+          alt="programmerWorking"
+          className={styles.background}
+          src={programmerWorking}
+        />
+        <div className={styles.backgroundBlur} />
+      </div>
     </VStack>
   )
 })
