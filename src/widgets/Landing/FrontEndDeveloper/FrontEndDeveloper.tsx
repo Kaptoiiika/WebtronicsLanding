@@ -7,9 +7,14 @@ import {
 import styles from "./FrontEndDeveloper.module.scss"
 import programmerWorking from "@/shared/assets/images/programmer-working.png"
 import Image from "next/image"
-import { memo } from "react"
+import { memo, useCallback } from "react"
 
 export const FrontEndDeveloper = memo(() => {
+
+  const hundleClick = useCallback(() => {
+    console.log("do somewhere")
+  }, [])
+
   return (
     <VStack className={styles.container}>
       <HStack align="end">
@@ -23,7 +28,7 @@ export const FrontEndDeveloper = memo(() => {
       </HStack>
 
       <HStack className={styles.developer} gap="24" align="center">
-        <Button>Start my career change</Button>
+        <Button onClick={hundleClick}>Start my career change</Button>
         <Typography variant={TypographyVariants.H1}>Developer</Typography>
       </HStack>
 

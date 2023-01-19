@@ -1,7 +1,4 @@
-# StoreProvider
-
-Так как добавлять redux на один экшн я посчитал слишком избыточным
-то я распишу здесь как я представляю его внедрение
+# Redux Store
 
 ## StateSchema
 
@@ -149,15 +146,14 @@ export function useDynamicModuleLoader({ reducers }: DynamicModuleLoaderProps) {
 Создаем обычный provider и прокидываем его куда нам надо для next в pages/_app.tsx
 
 ```ts
-type StoreProviderProps = {
-  initialState?: StateSchema
-  asyncReducers?: ReducersMapObject<StateSchema>
-} & PropsWithChildren
+const makeStore = () => createReduxStore()
+export const wrapper = createWrapper<Store<StateSchema>>(makeStore, {
+  debug: true,
+})
 
-export const StoreProvider = (props: StoreProviderProps) => {
-  const { children, initialState, asyncReducers } = props
-
-  const store = createReduxStore(initialState, asyncReducers)
+export const StoreProvider = (props: PropsWithChildren) => {
+  const { children } = props
+  const { store } = wrapper.useWrappedStore({})
 
   return <Provider store={store}>{children}</Provider>
 }
