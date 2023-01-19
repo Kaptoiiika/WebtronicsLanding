@@ -15,10 +15,7 @@ export const UploadFeedback = createAsyncThunk<
     const body = { email, name, phone }
 
     try {
-      const { data } = await thunkAPI.extra.api.post<FeedbackRespounce>(
-        "/feedback",
-        body
-      )
+      await thunkAPI.extra.api.post<FeedbackRespounce>("/feedback", body)
 
       return
     } catch (error) {

@@ -10,6 +10,9 @@ import { FeedbackFormSchema } from "@/features/Feedback"
 
 export interface StateSchema {
   feedbackForm: FeedbackFormSchema
+
+  // нужно что бы не получить эту ошибку The operand of a 'delete' operator must be optional" 
+  someAsyncReducer?: unknown 
 }
 
 export type StateSchemaKey = keyof StateSchema
