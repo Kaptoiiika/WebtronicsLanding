@@ -21,10 +21,10 @@ const Companylinks = [
 ]
 
 const SocialLinks = [
-  { path: `/#Facebook`, title: <FacebookIcon /> },
-  { path: `/#Twitter`, title: <TwitterIcon /> },
-  { path: `/#Gitlab`, title: <GitlabIcon /> },
-  { path: `/#Linkedin`, title: <LinkedinIcon /> },
+  { path: `/#Facebook`, title: <FacebookIcon />, label: "Facebook" },
+  { path: `/#Twitter`, title: <TwitterIcon />, label: "Twitter" },
+  { path: `/#Gitlab`, title: <GitlabIcon />, label: "Gitlab" },
+  { path: `/#Linkedin`, title: <LinkedinIcon />, label: "Linkedin" },
 ]
 
 export const Footer = () => {
@@ -61,7 +61,7 @@ export const Footer = () => {
 
           <HStack gap="24" align="center">
             {SocialLinks.map((link) => (
-              <Link key={link.path} href={link.path}>
+              <Link aria-label={link.label} key={link.path} href={link.path}>
                 {link.title}
               </Link>
             ))}

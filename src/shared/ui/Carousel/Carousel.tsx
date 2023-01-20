@@ -58,8 +58,8 @@ export const Carousel = (props: CarouselProps) => {
           </HStack>
 
           <HStack gap="24">
-            <Arrow onClick={hundlePrevItem} />
-            <Arrow onClick={hundleNextItem} orientation="right" />
+            <Arrow aria-label="previous" onClick={hundlePrevItem} />
+            <Arrow aria-label="next" onClick={hundleNextItem} orientation="right" />
           </HStack>
         </HStack>
 
